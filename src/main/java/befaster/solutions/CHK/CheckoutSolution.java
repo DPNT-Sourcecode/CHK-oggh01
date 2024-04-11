@@ -47,10 +47,19 @@ static{
           int count = entry.getValue();
 
           if(offers.containsKey(skusChr)){
-              Map<Integer,Integer> skuOffers = offers.get()
+              Map<Integer,Integer> skuOffers = offers.get(skusChr);
+              for(Integer threshold : skuOffers.keySet()){
+                  while(count >= threshold){
+                      total += skuOffers.get(threshold);
+                      count -= threshold;
+                  }
+              }
           }
+
+          total += count * prices.get(skusChr);
       }
 
+      return total;
 
         }
 
@@ -72,12 +81,14 @@ static{
     }
 
     if(basket.containsKey('U')){
-        int freeU = basket.get('U') / 3;
+        int countU = basket.get('U');
+        int freeU = basket.get('U') / 4;
         basket.computeIfPresent('U', (k, v) -> Math.max(v - freeU, 0));
     }
 
 }
 }
+
 
 
 
