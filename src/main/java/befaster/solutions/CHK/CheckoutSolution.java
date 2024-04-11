@@ -29,7 +29,7 @@ public class CheckoutSolution {
 
      int freeB = countE / 2;
 
-     if(countB > freeB) cp
+     if(countB > freeB) countB -= freeB;
 
      total += (countA / 3) * offerThreeA + (countA % 3) * priceA;
 
@@ -40,6 +40,7 @@ public class CheckoutSolution {
      return total;
     }
 }
+
 
 
 
