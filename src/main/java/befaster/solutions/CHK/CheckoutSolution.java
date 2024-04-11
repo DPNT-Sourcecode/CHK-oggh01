@@ -29,17 +29,23 @@ public class CheckoutSolution {
 
      int freeB = countE / 2;
 
-     if(countB > freeB) countB -= freeB;
-
-     total += (countA / 3) * offerThreeA + (countA % 3) * priceA;
+     if(countB > freeB)
+     {
+         countB -= freeB;
+     }
+     else {
+         countB = 0;
+     }
 
      total+= (countB / 2) * offerB + (countB % 2) * priceB;
 
-     total += countC * priceC + countD * priceD;
+     total += countC * priceC + countD * priceD + countE * priceE;
+
 
      return total;
     }
 }
+
 
 
 
