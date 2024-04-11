@@ -56,8 +56,11 @@ static{
                   }
               }
 
-
-          total += count * prices.get(skusChr);
+          if (skusChr == 'Z') {
+              total += entry.getValue();
+          } else {
+              total += count * prices.get(skusChr);
+          }
       }
 
       return total;
@@ -120,3 +123,4 @@ static{
        }
 
 }
+
