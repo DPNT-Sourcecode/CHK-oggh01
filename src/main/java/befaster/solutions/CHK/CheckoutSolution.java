@@ -12,11 +12,11 @@ public class CheckoutSolution {
 private static final Map<Character, Integer> prices = Map.ofEntries(
        Map.entry('A', 50), Map.entry('B', 30), Map.entry('C', 20), Map.entry('D', 15),
        Map.entry('E', 40), Map.entry('F', 10), Map.entry('G', 20), Map.entry('H', 10),
-       Map.entry('I', 35), Map.entry('J', 60), Map.entry('K', 80), Map.entry('L', 90),
+       Map.entry('I', 35), Map.entry('J', 60), Map.entry('K', 70), Map.entry('L', 90),
        Map.entry('M', 15), Map.entry('N', 40), Map.entry('O', 10), Map.entry('P', 50),
-       Map.entry('Q', 30), Map.entry('R', 50), Map.entry('S', 30), Map.entry('T', 20),
-       Map.entry('U', 40), Map.entry('V', 50), Map.entry('W', 20), Map.entry('X', 90),
-       Map.entry('Y', 10), Map.entry('Z', 50));
+       Map.entry('Q', 30), Map.entry('R', 50), Map.entry('S', 20), Map.entry('T', 20),
+       Map.entry('U', 40), Map.entry('V', 50), Map.entry('W', 20), Map.entry('X', 17),
+       Map.entry('Y', 20), Map.entry('Z', 21));
 
 
 private static final Map<Character, Map<Integer, Integer>> offers = new HashMap<>();
@@ -98,9 +98,10 @@ static{
                int freeF = basket.get('F') / 3;
                basket.put('F', countF - freeF);
            }
-           
+
 
 }
 }
+
 
 
