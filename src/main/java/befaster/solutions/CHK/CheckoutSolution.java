@@ -94,5 +94,8 @@ static{
                basket.put('F', countF - freeF);
            }
 
+           if()
+
 }
 }
+
