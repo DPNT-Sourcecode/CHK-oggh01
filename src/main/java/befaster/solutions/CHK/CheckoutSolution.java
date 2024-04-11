@@ -49,8 +49,11 @@ static{
 
               TreeMap<Integer, Integer> skuOffers = (TreeMap<Integer, Integer>) offers.get(skusChr);
               if(skuOffers != null) {
-                 for (Map.Entry<Integer, Integer>) offer : skuOffers.descendingMap().entrySet()){
-        
+                 for (Map.Entry<Integer, Integer> offer : skuOffers.descendingMap().entrySet()){
+                    while(count >= offer.getKey()) {
+                        total+= offer.getValue();
+                        count -= offer.getKey();
+                    }
                   }
               }
 
@@ -87,6 +90,7 @@ static{
 
 }
 }
+
 
 
 
