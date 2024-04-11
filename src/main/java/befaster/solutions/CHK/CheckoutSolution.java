@@ -17,7 +17,7 @@ public class CheckoutSolution {
                 case 'B' -> countB++;
                 case 'C' -> countC++;
                 case 'D' -> countD++;
-                default -> System.out.println("Product doesn't exist");
+                default -> { return -1; }
             }
 
         }
@@ -33,6 +33,7 @@ public class CheckoutSolution {
      return total;
     }
 }
+
 
 
 
