@@ -84,12 +84,19 @@ static{
 
     if(basket.containsKey('U')){
         int countU = basket.get('U');
-        int freeU = basket.get('U') / 3;
+        int freeU = basket.get('U') / 4;
         basket.put('U', countU - freeU);
     }
 
+           if(basket.containsKey('F')){
+               int countU = basket.get('F');
+               int freeU = basket.get('F') / 3;
+               basket.put('U', countU - freeU);
+           }
+
 }
 }
+
 
 
 
