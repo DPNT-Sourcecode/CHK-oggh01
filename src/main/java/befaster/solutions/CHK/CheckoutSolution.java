@@ -22,13 +22,13 @@ private static final Map<Character, Integer> prices = Map.ofEntries(
 private static final Map<Character, Map<Integer, Integer>> offers = new HashMap<>();
 
 static{
-    offers.put('A', new TreeMap<>( Map.of(3, 130, 5, 200)));
-    offers.put('B', new TreeMap<>( Map.of(2, 45)));
-    offers.put('H', new TreeMap<>( Map.of(5, 45, 10, 80)));
-    offers.put('K', new TreeMap<>( Map.of(2,150)));
-    offers.put('P', new TreeMap<>( Map.of(5,200)));
-    offers.put('Q', new TreeMap<>( Map.of(3,80)));
-    offers.put('V', new TreeMap<>( Map.of(2, 90, 3,130)));
+    offers.put('A', new TreeMap<>(Map.of(5, 200, 3, 130)));
+    offers.put('B', new TreeMap<>(Map.of(2, 45)));
+    offers.put('H', new TreeMap<>(Map.of(10, 80, 5, 45)));
+    offers.put('K', new TreeMap<>(Map.of(2, 150)));
+    offers.put('P', new TreeMap<>(Map.of(5, 200)));
+    offers.put('Q', new TreeMap<>(Map.of(3, 80)));
+    offers.put('V', new TreeMap<>(Map.of(3, 130, 2, 90)));
 }
     public Integer checkout(String skus) {
 
@@ -48,7 +48,7 @@ static{
           int count = entry.getValue();
 
           if(offers.containsKey(skusChr)){
-              Map<Integer,Integer> skuOffers = offers.get(skusChr);
+              TreeMap<Integer,Integer> skuOffers = offers.get(skusChr);
               for(Integer threshold : skuOffers.keySet()){
                   while(count >= threshold){
                       total += skuOffers.get(threshold);
@@ -82,9 +82,11 @@ static{
     }
 
     if(basket.containsKey('U')){
+        int countU = basket.get('U');
         int freeU = basket.get('U') / 3;
-        basket.computeIfPresent('U', (k, v) -> Math.max(v - freeU, 0));
+        basket.put('U', countU - freeU);
     }
 
 }
 }
+
