@@ -14,7 +14,7 @@ private static final Map<Character, Integer> prices = Map.ofEntries(
        Map.entry('M', 15), Map.entry('N', 40), Map.entry('O', 10), Map.entry('P', 50),
        Map.entry('Q', 30), Map.entry('R', 50), Map.entry('S', 20), Map.entry('T', 20),
        Map.entry('U', 40), Map.entry('V', 50), Map.entry('W', 20), Map.entry('X', 17),
-       Map.entry('Y', 20), Map.entry('Z', 21));
+       Map.entry('Y', 20), Map.entry('Z', 21), Map.entry('@', 0));
 
 
 private static final Map<Character, Map<Integer, Integer>> offers = new HashMap<>();
@@ -56,7 +56,7 @@ static{
                   }
               }
 
-          if (skusChr == 'Z') {
+          if (skusChr == '@') {
               total += entry.getValue();
           } else {
               total += count * prices.get(skusChr);
@@ -118,9 +118,10 @@ static{
            }
 
 
-           basket.put('Z', basket.getOrDefault('Z', 0) + totalDiscountPrice);
+           basket.put('@', basket.getOrDefault('@', 0) + totalDiscountPrice);
 
        }
 
 }
+
 
