@@ -97,11 +97,25 @@ static{
 
            if(basket.containsKey('S') ||basket.containsKey('T') ||basket.containsKey('X') ||basket.containsKey('Y') ||basket.containsKey('Z')){
 
-               for()
+
+               int countSpecialItems = 0;
+               for (char item : basket.keySet()) {
+                   if (item == 'S' || item == 'T' || item == 'X' || item == 'Y' || item == 'Z') {
+                       countSpecialItems += basket.get(item);
+                   }
+               }
+               int freeItems = countSpecialItems / 3;
+               for (char item : basket.keySet()) {
+                   if (item == 'S' || item == 'T' || item == 'X' || item == 'Y' || item == 'Z') {
+                       basket.put(item, basket.get(item) - freeItems);
+                   }
+               }
+           }
 
            }
-       }
+
 }
+
 
 
 
