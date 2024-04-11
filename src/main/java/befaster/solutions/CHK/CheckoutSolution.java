@@ -3,9 +3,7 @@ package befaster.solutions.CHK;
 import befaster.runner.SolutionNotImplementedException;
 
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class CheckoutSolution {
 
@@ -95,23 +93,30 @@ static{
                basket.put('F', countF - freeF);
            }
 
-           if(basket.containsKey('S') ||basket.containsKey('T') ||basket.containsKey('X') ||basket.containsKey('Y') ||basket.containsKey('Z')){
-
-
-               int countSpecialItems = 0;
-               for (char item : basket.keySet()) {
-                   if (item == 'S' || item == 'T' || item == 'X' || item == 'Y' || item == 'Z') {
-                       countSpecialItems += basket.get(item);
-                   }
-               }
-               int freeItems = countSpecialItems / 3;
-               for (char item : basket.keySet()) {
-                   if (item == 'S' || item == 'T' || item == 'X' || item == 'Y' || item == 'Z') {
-                       basket.put(item, basket.get(item) - freeItems);
-                   }
+           char[] groupItems = new char[] {'S', 'T', 'X', 'Y', 'Z'};
+           List<Character> itemList = new ArrayList<>();
+           for (char item : groupItems) {
+               int count = basket.getOrDefault(item, 0);
+               for (int i = 0; i < count; i++) {
+                   itemList.add(item);
                }
            }
 
+
+           itemList.sort((a, b) -> prices.get(b) - prices.get(a));
+
+           int completeGroupsOfThree = itemList.size() / 3;
+           int totalDiscountPrice = completeGroupsOfThree * 45;
+
+
+           for (int i = 0; i < completeGroupsOfThree * 3; i++) {
+               char item = itemList.get(i);
+               basket.put(item, basket.get(item) - 1);
            }
+
+
+           basket.put('Z', basket.getOrDefault('Z', 0) + totalDiscountPrice);
+
+       }
 
 }
