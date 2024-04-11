@@ -24,7 +24,9 @@ public class CheckoutSolution {
 
         int total = 0;
 
-     total += (countA / 3) * offerA + (countA % 3) * priceA;
+     total += (countA / 5) * offerFiveA + ((countA % 5 / 3) * offerThreeA + ((countA % 5) % 3) * priceA;
+
+     total += (countA / 3) * offerThreeA + (countA % 3) * priceA;
 
      total+= (countB / 2) * offerB + (countB % 2) * priceB;
 
@@ -33,4 +35,5 @@ public class CheckoutSolution {
      return total;
     }
 }
+
 
