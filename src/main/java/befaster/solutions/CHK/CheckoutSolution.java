@@ -28,7 +28,7 @@ static{
     offers.put('K', new TreeMap<>(Map.of(2, 120)));
     offers.put('P', new TreeMap<>(Map.of(5, 200)));
     offers.put('Q', new TreeMap<>(Map.of(3, 80)));
-    offers.put('V', new TreeMap<>(Map.of(3, 45 )));
+    offers.put('V', new TreeMap<>(Map.of(3, 130, 2, 90 )));
     offers.put('S', new TreeMap<>(Map.of(3, 45 )));
     offers.put('T', new TreeMap<>(Map.of(3, 45 )));
     offers.put('X', new TreeMap<>(Map.of(3, 45 )));
@@ -102,6 +102,7 @@ static{
 
 }
 }
+
 
 
 
