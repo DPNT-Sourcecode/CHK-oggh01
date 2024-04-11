@@ -81,13 +81,13 @@ static{
     }
 
     if(basket.containsKey('U')){
-        int countU = basket.get('U');
-        int freeU = basket.get('U') / 4;
+        int freeU = basket.get('U') / 3;
         basket.computeIfPresent('U', (k, v) -> Math.max(v - freeU, 0));
     }
 
 }
 }
+
 
 
 
