@@ -29,11 +29,7 @@ static{
     offers.put('P', new TreeMap<>(Map.of(5, 200)));
     offers.put('Q', new TreeMap<>(Map.of(3, 80)));
     offers.put('V', new TreeMap<>(Map.of(3, 130, 2, 90 )));
-    offers.put('S', new TreeMap<>(Map.of(3, 45 )));
-    offers.put('T', new TreeMap<>(Map.of(3, 45 )));
-    offers.put('X', new TreeMap<>(Map.of(3, 45 )));
-    offers.put('Y', new TreeMap<>(Map.of(3, 45 )));
-    offers.put('Z', new TreeMap<>(Map.of(3, 45 )));
+
 }
     public Integer checkout(String skus) {
 
@@ -99,9 +95,9 @@ static{
                basket.put('F', countF - freeF);
            }
 
+           if(basket.containsKey("XT"))
+}
 
-}
-}
 
 
 
