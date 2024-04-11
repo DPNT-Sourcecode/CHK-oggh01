@@ -7,9 +7,9 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
 
-        int priceA = 50, priceB = 30, priceC = 20, priceD = 15;
+        int priceA = 50, priceB = 30, priceC = 20, priceD = 15, priceE = 40;
         int offerThreeA = 130, offerFiveA = 200, offerB = 45;
-        int countA = 0, countB = 0, countC = 0, countD = 0;
+        int countA = 0, countB = 0, countC = 0, countD = 0, countE = 0;
 
         for(char skusChr : skus.toCharArray()){
             switch (skusChr){
@@ -17,6 +17,7 @@ public class CheckoutSolution {
                 case 'B' -> countB++;
                 case 'C' -> countC++;
                 case 'D' -> countD++;
+                case 'E' -> countE++;
                 default -> { return -1; }
             }
 
@@ -24,7 +25,11 @@ public class CheckoutSolution {
 
         int total = 0;
 
-     total += (countA / 5) * offerFiveA + ((countA % 5 / 3) * offerThreeA + ((countA % 5) % 3) * priceA;
+     total += (countA / 5) * offerFiveA + ((countA % 5) / 3) * offerThreeA + ((countA % 5) % 3) * priceA;
+
+     int freeB = countE / 2;
+
+     if(countB > freeB) cp
 
      total += (countA / 3) * offerThreeA + (countA % 3) * priceA;
 
@@ -35,5 +40,6 @@ public class CheckoutSolution {
      return total;
     }
 }
+
 
 
