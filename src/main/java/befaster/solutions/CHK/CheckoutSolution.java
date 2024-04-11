@@ -48,12 +48,12 @@ static{
           int count = entry.getValue();
 
           if(offers.containsKey(skusChr)){
-              Map<Integer,Integer> skuOffers = offers.get(skusChr);
-              for(Integer threshold : skuOffers.keySet()){
-                  while(count >= threshold){
-                      total += skuOffers.get(threshold);
-                      count -= threshold;
-                  }
+              TreeMap<Integer,Integer> skuOffers = offers.get(skusChr);
+            skuOffers.descendingMap().forEach(threshold, price) ->{
+                while (count >= threshold){
+                    total+= price;
+                    count -= threshold;
+                }
               }
           }
 
@@ -89,5 +89,6 @@ static{
 
 }
 }
+
 
 
