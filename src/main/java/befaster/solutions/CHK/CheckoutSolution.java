@@ -89,10 +89,11 @@ static{
     }
 
            if(basket.containsKey('F')){
-               int countU = basket.get('F');
-               int freeU = basket.get('F') / 3;
-               basket.put('U', countU - freeU);
+               int countF = basket.get('F');
+               int freeF = basket.get('F') / 3;
+               basket.put('F', countF - freeF);
            }
 
 }
 }
+
