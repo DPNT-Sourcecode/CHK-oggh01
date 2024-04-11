@@ -45,11 +45,27 @@ static{
 
     if(basket.containsKey('E')){
         int freeB = basket.get('E') / 2;
-        basket.computeIfPresent('B', (k, v) -> Math.max(v - freeB, 0);
+        basket.computeIfPresent('B', (k, v) -> Math.max(v - freeB, 0));
+    }
+
+    if(basket.containsKey('N')){
+        int freeM = basket.get('N') / 3;
+        basket.computeIfPresent('M', (k, v) -> Math.max(v - freeM, 0));
+    }
+
+    if(basket.containsKey('R')){
+        int freeQ = basket.get('R') / 3;
+        basket.computeIfPresent('Q', (k, v) -> Math.max(v - freeQ, 0));
+    }
+
+    if(basket.containsKey('R')){
+        int freeQ = basket.get('R') / 3;
+        basket.computeIfPresent('Q', (k, v) -> Math.max(v - freeQ, 0));
     }
 
 }
 }
+
 
 
 
