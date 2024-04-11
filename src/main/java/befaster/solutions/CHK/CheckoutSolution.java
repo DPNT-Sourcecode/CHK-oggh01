@@ -14,10 +14,11 @@ public class CheckoutSolution {
                 case 'D' -> countD++;
                 default -> System.out.println("Product doesn't exist");
             }
-        
+
         }
     }
 }
+
 
 
 
