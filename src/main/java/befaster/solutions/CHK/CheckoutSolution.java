@@ -2,20 +2,20 @@ package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
 
-import java.util.AbstractMap.SimpleEntry;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class CheckoutSolution {
 
 private static final Map<Character, Integer> prices = Map.ofEntries(
-        new SimpleEntry<>('A', 50), new SimpleEntry<>('B', 30), new SimpleEntry<>('C', 20), new SimpleEntry<>('D', 15),
-        new SimpleEntry<>('E', 40), new SimpleEntry<>('F', 10), new SimpleEntry<>('G', 20), new SimpleEntry<>('H', 10),
-        new SimpleEntry<>('I', 35), new SimpleEntry<>('J', 60), new SimpleEntry<>('K', 80), new SimpleEntry<>('L', 90),
-        new SimpleEntry<>('M', 15), new SimpleEntry<>('N', 40), new SimpleEntry<>('O', 10), new SimpleEntry<>('P', 50),
-        new SimpleEntry<>('Q', 30), new SimpleEntry<>('R', 50), new SimpleEntry<>('S', 30), new SimpleEntry<>('T', 20),
-        new SimpleEntry<>('U', 40), new SimpleEntry<>('V', 50), new SimpleEntry<>('W', 20), new SimpleEntry<>('X', 90),
-        new SimpleEntry<>('Y', 10), new SimpleEntry<>('Z', 50));
+       Map.entry('A', 50), Map.entry('B', 30), Map.entry('C', 20), Map.entry('D', 15),
+       Map.entry('E', 40), Map.entry('F', 10), Map.entry('G', 20), Map.entry('H', 10),
+       Map.entry('I', 35), Map.entry('J', 60), Map.entry('K', 80), Map.entry('L', 90),
+       Map.entry('M', 15), Map.entry('N', 40), Map.entry('O', 10), Map.entry('P', 50),
+       Map.entry('Q', 30), Map.entry('R', 50), Map.entry('S', 30), Map.entry('T', 20),
+       Map.entry('U', 40), Map.entry('V', 50), Map.entry('W', 20), Map.entry('X', 90),
+       Map.entry('Y', 10), Map.entry('Z', 50));
 
 
 private static final Map<Character, Map<Integer, Integer>> offers = new HashMap<>();
@@ -71,4 +71,5 @@ static{
      return total;
     }
 }
+
 
