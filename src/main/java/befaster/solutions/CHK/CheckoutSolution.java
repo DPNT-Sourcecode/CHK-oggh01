@@ -2,9 +2,11 @@ package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
 
+import java.util.Map;
+
 public class CheckoutSolution {
 
-
+private static final Map<Character, Integer> prices = Map.of()
     public Integer checkout(String skus) {
 
         int priceA = 50, priceB = 30, priceC = 20, priceD = 15, priceE = 40, priceF = 10;
@@ -47,5 +49,6 @@ public class CheckoutSolution {
      return total;
     }
 }
+
 
 
