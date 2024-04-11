@@ -29,14 +29,6 @@ public class CheckoutSolution {
      total += (countA / 5) * offerFiveA + ((countA % 5) / 3) * offerThreeA + ((countA % 5) % 3) * priceA;
 
      int freeB = countE / 2;
-     int freeF = 0;
-
-     if(countF > 3){
-
-         freeF = countF / 2;
-
-         countF -= freeF;
-     }
 
      if(countB > freeB)
      {
@@ -50,9 +42,10 @@ public class CheckoutSolution {
 
      total += countC * priceC + countD * priceD + countE * priceE;
 
-     total += countF * priceF;
+     total += ((countF / 3) * 2 + (countF % 3)) * priceF;
 
      return total;
     }
 }
+
 
