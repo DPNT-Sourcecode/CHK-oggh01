@@ -2,15 +2,19 @@ package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
 
+import java.util.AbstractMap.SimpleEntry;
 import java.util.Map;
 
 public class CheckoutSolution {
 
 private static final Map<Character, Integer> prices = Map.ofEntries(
-        w'A', 50, 'B', 30, 'C', 20, 'D', 15, 'F', 10, 'G', 20,
-        'H', 10, 'I', 35, 'J', 60, 'K', 80, 'L', 90, 'M', 15, 'N', 40, 'O', 10,
-        'P', 50, 'Q', 30, 'R', 50, 'S', 30, 'T', 20, 'U', 40, 'V', 50, 'W', 20,
-        'X', 90, 'Y', 10, 'Z', 50);
+        new SimpleEntry<>('A', 50), new SimpleEntry<>('B', 30), new SimpleEntry<>('C', 20), new SimpleEntry<>('D', 15),
+        new SimpleEntry<>('E', 40), new SimpleEntry<>('F', 10), new SimpleEntry<>('G', 20), new SimpleEntry<>('H', 10),
+        new SimpleEntry<>('I', 35), new SimpleEntry<>('J', 60), new SimpleEntry<>('K', 80), new SimpleEntry<>('L', 90),
+        new SimpleEntry<>('M', 15), new SimpleEntry<>('N', 40), new SimpleEntry<>('O', 10), new SimpleEntry<>('P', 50),
+        new SimpleEntry<>('Q', 30), new SimpleEntry<>('R', 50), new SimpleEntry<>('S', 30), new SimpleEntry<>('T', 20),
+        new SimpleEntry<>('U', 40), new SimpleEntry<>('V', 50), new SimpleEntry<>('W', 20), new SimpleEntry<>('X', 90),
+        new SimpleEntry<>('Y', 10), new SimpleEntry<>('Z', 50));
     public Integer checkout(String skus) {
 
         int priceA = 50, priceB = 30, priceC = 20, priceD = 15, priceE = 40, priceF = 10;
@@ -53,8 +57,3 @@ private static final Map<Character, Integer> prices = Map.ofEntries(
      return total;
     }
 }
-
-
-
-
-
