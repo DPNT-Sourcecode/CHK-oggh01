@@ -95,8 +95,14 @@ static{
                basket.put('F', countF - freeF);
            }
 
-           if(basket.containsKey("XT"))
+           if(basket.containsKey('S') ||basket.containsKey('T') ||basket.containsKey('X') ||basket.containsKey('Y') ||basket.containsKey('Z')){
+
+               for()
+
+           }
+       }
 }
+
 
 
 
