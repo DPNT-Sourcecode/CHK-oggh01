@@ -38,6 +38,19 @@ static{
           basket.merge(skusChr, 1, Integer::sum);
       }
 
+      applySpecialOffers(basket);
+
+      int total = 0;
+
+      for(Map.Entry<Character, Integer> entry : basket.entrySet()){
+          char skusChr = entry.getKey();
+          int count = entry.getValue();
+
+          if(offers.containsKey(skusChr)){
+              Map<Integer,Integer> skuOffers = offers.get()
+          }
+      }
+
 
         }
 
@@ -58,13 +71,14 @@ static{
         basket.computeIfPresent('Q', (k, v) -> Math.max(v - freeQ, 0));
     }
 
-    if(basket.containsKey('R')){
-        int freeQ = basket.get('R') / 3;
-        basket.computeIfPresent('Q', (k, v) -> Math.max(v - freeQ, 0));
+    if(basket.containsKey('U')){
+        int freeU = basket.get('U') / 3;
+        basket.computeIfPresent('U', (k, v) -> Math.max(v - freeU, 0));
     }
 
 }
 }
+
 
 
 
